@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<link rel="icon" href="" />
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.00" />
+		<title>Simulated Annealing</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+
+		<!-- <script src="/socket.io/socket.io.js"></script> -->
+
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+		<script src="js/ui.js" type="module" defer></script>
+		<script src="js/generate.js" defer></script>
+		<script src="js/drawingTools.js" type="module" defer></script>
+		<script src="js/state.js" type="module" defer></script>
+		<script src="js/stateSpace.js" type="module" defer></script>
+		<script src="js/algorithm.js" type="module" defer></script>
+		<script src="js/beepSound.js" type="module" defer></script>
+		<script src="js/main.js" type="module" defer></script>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+
+		<div class="controls">
+			<div class="settings-btn"><i class="material-icons">settings</i></div>
+			<div class="refresh-btn" onclick="generateTerrain(1.5, 0.5)"><i class="material-icons">refresh</i></div>
+			<div class="start-btn"><i class="material-icons">play_arrow</i></div>
+		</div>
+
+		<div class="settings">
+			<div class="ctn1">
+				<div>
+					<label for="temperature">Initial Temp:</label>
+					<input class="temperature input" type="number" id="temperature" value="10" />
+				</div>
+
+				<div>
+					<label for="coolingRate">Cooling Rate:</label>
+					<input class="cooling-rate input" type="number" id="coolingRate" value="0.95" />
+				</div>
+			</div>
+
+			<label for="simulationSpeed">Simulation Speed:</label>
+			<input class="simulation-speed input" type="number" id="simulationSpeed" value="5" />
+
+			<hr />
+			<button class="submit">DONE</button>
+		</div>
+	</body>
+</html>

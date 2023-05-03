@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+
+body {
+	margin: 0px;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	height: 100vh;
+	background: linear-gradient(45deg, rgb(90, 18, 18, 70%) 10%, #ffa528b3, #ffe924b3);
+	background-repeat: no-repeat;
+}
+
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family: 'Raleway', sans-serif;
+	scroll-behavior: smooth;
+}
+
+p {
+	margin: 0px;
+	font-size: 1em/1.3;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield;
+}
+
+input:focus {
+	outline: none;
+}
+
+#canvas {
+	padding-top: 200px;
+	width: 100vw;
+}
+
+.controls {
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	grid-template-columns: auto auto auto;
+	gap: 0.7em;
+	padding: 10px;
+	margin-top: 10px;
+	background-color: rgb(71, 71, 71);
+	border-radius: 60px;
+	box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+}
+
+.settings-btn,
+.refresh-btn,
+.start-btn {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px;
+	background-color: rgb(54, 54, 54);
+	border-radius: 100%;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.settings-btn:hover,
+.refresh-btn:hover,
+.start-btn:hover {
+	cursor: pointer;
+	background-color: rgb(60, 60, 60);
+}
+
+.settings-btn:nth-child(1n),
+.refresh-btn:nth-child(1n),
+.start-btn:nth-child(1n) {
+	color: rgb(141, 141, 141);
+}
+
+.settings {
+	color: whitesmoke;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translate(-50%, 50%);
+	transform: translate(-50%, 50%);
+	margin: 0;
+	background-color: rgb(71, 71, 71);
+	border-radius: 0.5em;
+	padding: 1.5em 1em 1em 1em;
+	-webkit-box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+	box-shadow: 0 5px 15px rgb(0 0 0 / 50%);
+}
+
+.settings:after,
+.ctn1:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+.ctn1 {
+	display: block;
+}
+
+.ctn1 div {
+	float: left;
+}
+
+@media (min-width: 550px) {
+	.ctn1 div {
+		width: 48%;
+		margin-left: 4%;
+	}
+}
+
+@media (max-width: 550px) {
+	.ctn1 div {
+		width: 100%;
+	}
+}
+
+@media (min-width: 550px) {
+	.ctn1 div:first-child {
+		margin-left: 0;
+	}
+}
+
+.settings hr {
+	display: block;
+	unicode-bidi: isolate;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	overflow: hidden;
+	border-style: inset;
+	margin-top: 0.25em;
+	margin-bottom: 1em;
+}
+
+/* width */
+.settings::-webkit-scrollbar {
+	width: 13px;
+	border-radius: 0px 15px 15px 0px;
+	left: 100px;
+}
+
+/* Track */
+.settings::-webkit-scrollbar-track {
+	background: rgb(71, 71, 71);
+	border-radius: 0px 15px 15px 0px;
+}
+
+/* Handle */
+.settings::-webkit-scrollbar-thumb {
+	background: rgb(120, 120, 120);
+	border-radius: 0px 15px 15px 0px;
+}
+
+/* Handle on hover */
+.settings::-webkit-scrollbar-thumb:hover {
+	background: rgb(100, 100, 100);
+	border-radius: 0px 15px 15px 0px;
+}
+
+.submit {
+	grid-column: 1 / 3;
+}
+
+.input {
+	height: 38px;
+	width: 100%;
+	padding: 6px 10px;
+	background-color: rgba(0, 0, 0, 0.05);
+	color: whitesmoke;
+	border: none;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 5px rgb(0 0 0 / 50%);
+	box-shadow: inset 0 1px 5px rgb(0 0 0 / 50%);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: background-color 0.25s, background-color 0.5s, border 0.25s;
+	transition: background-color 0.25s, background-color 0.5s, border 0.25s;
+	margin-bottom: 1.5rem;
+	appearance: none;
+	line-height: normal;
+}
+
+.input:focus {
+	background-color: rgb(83, 83, 83);
+}
+
+.submit {
+	height: 38px;
+	width: 100%;
+	padding: 6px 10px;
+	background-color: rgba(0, 0, 0, 0.05);
+	color: whitesmoke;
+	border: none;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 5px rgb(0 0 0 / 50%);
+	box-shadow: inset 0 1px 5px rgb(0 0 0 / 50%);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: background-color 0.25s, background-color 0.5s, border 0.25s;
+	transition: background-color 0.25s, background-color 0.5s, border 0.25s;
+	appearance: none;
+	line-height: normal;
+	margin-bottom: 1rem;
+}
+
+.submit:hover {
+	cursor: pointer;
+	transform: scale(1.01);
+	-webkit-box-shadow: inset 0 1px 5px rgba(136, 136, 136, 0.5);
+	box-shadow: inset 0 1px 10px rgb(51, 51, 51);
+	background-color: rgb(83, 83, 83);
+	color: rgba(255, 255, 255, 0.4);
+}
